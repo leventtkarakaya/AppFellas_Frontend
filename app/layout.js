@@ -1,4 +1,5 @@
 import "./globals.css";
+import ProviderRedux from "@/app/redux/provider";
 
 export const metadata = {
   title: "AirCraft",
@@ -7,8 +8,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="tr">
+      <body>
+        <ProviderRedux>{children}</ProviderRedux>
+      </body>
     </html>
   );
 }

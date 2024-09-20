@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex-1 gap-5 ">
           <a href="/">
-            <Image src={Logo} alt="Logo" width={80} height={80} />
+            <Image src={Logo} alt="Logo" width={80} height={80} priority />
           </a>
           <p className="mb-3 text-2xl text-[#4c038c] uppercase">Plane Scape</p>
         </div>

@@ -10,7 +10,7 @@ import SumUmbrella from "@/public/images/sun-umbrella.png";
 export default function Sidebar() {
   return (
     <>
-      <div className="sticky top-0 ">
+      <div className="sticky top-0 mt-8">
         <div className="flex flex-col items-center justify-center gap-10 pb-20 ">
           <div className="relative flex flex-col gap-2 ">
             <Image
@@ -18,7 +18,7 @@ export default function Sidebar() {
               alt="carBg"
               width={400}
               height={400}
-              className="-z-10"
+              className="-z-10 rounded-3xl"
             />
             <div className="absolute z-10 translate-y-0 bottom-2 left-5 transla e-x-0 ">
               <Image src={Car} alt="car" width={40} height={40} className="" />
@@ -26,7 +26,13 @@ export default function Sidebar() {
             </div>
           </div>
           <div className="relative flex flex-col gap-2 ">
-            <Image src={HotelBg} alt="hotelBg" width={400} height={400} />
+            <Image
+              src={HotelBg}
+              alt="hotelBg"
+              width={400}
+              height={400}
+              className="rounded-3xl"
+            />
             <div className="absolute z-10 translate-y-0 bottom-2 left-5 transla e-x-0 ">
               <Image src={Hotel} alt="hotel" width={50} height={50} />
               <p className="font-bold text-white uppercase">Hotels</p>
@@ -38,6 +44,7 @@ export default function Sidebar() {
               alt="sumUmbrellaBg"
               width={400}
               height={400}
+              className="rounded-3xl"
             />
             <div className="absolute z-10 translate-y-0 bottom-2 left-5 transla e-x-0 ">
               <Image
