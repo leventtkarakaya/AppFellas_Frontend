@@ -37,27 +37,33 @@ export default function Navbar() {
               priority
             />
           </a>
-          <p className="mb-3 text-2xl text-[#4c038c] uppercase">Plane Scape</p>
+          <p className="mb-3 text-2xl font-bold text-black uppercase">
+            Plane Scape
+          </p>
         </div>
         {/* Icons && Dropdown */}
-        <div className="flex-none gap-2 ">
+        <div className="flex items-center gap-8">
           {/* Icons start */}
-          <Image
-            src={tag}
-            alt="tag"
-            width={25}
-            height={25}
-            className=" max-md:hidden"
-          />
-          <p className="text-[#4c038c] max-md:hidden">Deals</p>
-          <Image
-            src={earth}
-            alt="earth"
-            width={25}
-            height={25}
-            className=" max-md:hidden"
-          />
-          <p className="text-[#4c038c] max-md:hidden">Discover</p>
+          <div className="flex gap-2">
+            <Image
+              src={tag}
+              alt="tag"
+              width={25}
+              height={25}
+              className=" max-md:hidden"
+            />
+            <p className="text-[#4a03a0] max-md:hidden">Deals</p>
+          </div>
+          <div className="flex gap-2">
+            <Image
+              src={earth}
+              alt="earth"
+              width={25}
+              height={25}
+              className=" max-md:hidden"
+            />
+            <p className="text-[#4a03a0] max-md:hidden">Discover</p>
+          </div>
           {/* Icons end */}
           {/* Dropdown start*/}
           <div className="dropdown dropdown-end">
@@ -81,7 +87,10 @@ export default function Navbar() {
             >
               {userPersist === null ? (
                 <li>
-                  <a href="/login" className="px-6 btn btn-primary">
+                  <a
+                    href="/login"
+                    className="px-6 btn bg-[#4a03a0] text-white hover:bg-[#4a03a0] hover:text-white"
+                  >
                     Üye Ol
                   </a>
                 </li>
@@ -93,19 +102,22 @@ export default function Navbar() {
               )}
               {userPersist === null ? null : (
                 <li>
+                  <a
+                    href="/myflights"
+                    className="px-10 btn bg-[#4a03a0] text-white hover:bg-[#4a03a0] hover:text-white"
+                  >
+                    Uçuşlarım
+                  </a>
+                </li>
+              )}
+              {userPersist === null ? null : (
+                <li>
                   <ModalLogout userClear={clearUser} dispatch={dispatch} />
                 </li>
               )}
               {userPersist === null ? null : (
                 <li>
                   <ModalAccDel />
-                </li>
-              )}
-              {userPersist === null ? null : (
-                <li>
-                  <a href="/myflights" className="px-10 btn btn-primary">
-                    Uçuşlarım
-                  </a>
                 </li>
               )}
             </ul>

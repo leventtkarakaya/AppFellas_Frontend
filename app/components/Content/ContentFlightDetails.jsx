@@ -18,7 +18,7 @@ export default function ContentFlightDetails() {
   console.log("🚀 ~ ContentFlightDetails ~ buttonRef:", buttonRef);
   return (
     <>
-      <div className="my-20 lg:ml-32 lg:w-full">
+      <div className="my-20 lg:ml-16 lg:w-full">
         {flightList.length > 0 ? (
           flights?.map((item, index) => {
             return (
@@ -36,8 +36,14 @@ export default function ContentFlightDetails() {
                       <PlaneTakeoff size={24} />
                       <p>Departure</p>
                     </div>
-                    <p>{`${item?.scheduleDate || "2024-09-24"} - AM`}</p>
-                    <p>Airport {`${item?.prefixIATA || "MXP"}`}</p>
+                    <p className="text-lg font-bold">
+                      {`${moment(
+                        item?.scheduleDateTime || "2024-09-24T09:00:00"
+                      ).format("hh:mm ")} - ${moment(
+                        item?.scheduleDateTime || "2024-09-24T09:00:00"
+                      ).format("A")}`}
+                    </p>
+                    <p>Airport:{`${item?.prefixIATA || "MXP"}`}</p>
                   </div>
                   {/* Line */}
                   <span className="w-16 h-[1px] bg-gray-500"></span>
@@ -52,7 +58,9 @@ export default function ContentFlightDetails() {
                       className="ml-3"
                     />
                     <p>
-                      {`${moment(item?.actualLandingTime).format("hh:mm A")}`}
+                      {`${moment(item?.actualLandingTime).format(
+                        "hh:mm "
+                      )} (Nonstop)`}
                     </p>
                   </div>
                   {/* Line */}
@@ -63,32 +71,32 @@ export default function ContentFlightDetails() {
                       <PlaneLanding size={24} />
                       <p>Arrival</p>
                     </div>
-                    <p>{`${item?.scheduleDate || "2024-09-24"} - AM`}</p>
-                    <p>Airport {`${item?.prefixIATA || "MXP"}`}</p>
+                    <p className="text-lg font-bold">
+                      {`${moment(
+                        item?.estimatedLandingTime || "2024-09-24T09:00:00"
+                      ).format("hh:mm ")} - ${moment(
+                        item?.estimatedLandingTime || "2024-09-24T09:00:00"
+                      ).format("A")}`}
+                    </p>
+                    <p>Airport:{`${item?.prefixIATA || "MXP"}`}</p>
                   </div>
                 </div>
                 {/* Flight Details */} {/* Flight Price && Btn */}
                 <div className="flex items-center justify-between gap-10">
                   <div className="flex flex-col gap-2">
-                    <p>Price: $100</p>
+                    <p className="text-xl font-bold text-[#4a03a0]">
+                      Price: $100
+                    </p>
                     <p>Round Trip</p>
                     <div>
-                      <button className="btn btn-primary">
+                      <button className="btn bg-[#f5f5f5] underline  text-[#4a03a0] cursor-pointer">
                         Check the details
                       </button>
                     </div>
                   </div>
-                  <div>
-                    <button
-                      className="btn btn-primary"
-                      ref={buttonRef}
-                      onClick={() => {
-                        buttonRef.current?.click();
-                      }}
-                    >
-                      Book Flight
-                    </button>
-                  </div>
+                  <button className="bg-[#4a03a0] text-white px-10 py-7 rounded-tl-xl rounded-br-xl text-center cursor-pointer">
+                    <p>Book Flight</p>
+                  </button>
                 </div>
                 {/* Flight Price && Btn */} {/* Flight */}
               </div>

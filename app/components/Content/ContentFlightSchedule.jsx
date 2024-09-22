@@ -4,8 +4,9 @@ import Image from "next/image";
 import Airplane from "@/public/images/airplane.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { PlaneLanding, PlaneTakeoff } from "lucide-react";
-import { Calendar } from "lucide-react";
+import PlaneTakeOff from "@/public/images/PlaneTakeOff.png";
+import PlaneLanding from "@/public/images/PlaneLanding.png";
+import Calender from "@/public/images/Calender.png";
 import { setFlights } from "@/app/redux/slice/flightsSlice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
@@ -36,16 +37,21 @@ export default function FlightSchedule() {
   };
   return (
     <>
-      <div className="flex w-3/4 lg:ml-10">
+      <div className="flex lg:ml-10 xl:w-full ">
         <div className="flex flex-col max-sm:w-full max-sm:ml-5">
           {/* Flights  && Icons */}
           <div className="flex items-center justify-between p-5 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:p-0 ">
-            <Image src={Airplane} alt="airplane" width={40} height={40} />
+            <div className="flex items-center gap-2">
+              <Image src={Airplane} alt="airplane" width={40} height={40} />
+              <h1 className="text-3xl font-semibold uppercase">
+                Book your Flight
+              </h1>
+            </div>
             <div className="flex">
-              <button className="rounded-none rounded-tl-full rounded-bl-full btn btn-primary hover:border-white">
+              <button className="rounded-none rounded-tl-full rounded-bl-full btn bg-[#4a03a0] text-white hover:border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#4a03a0]">
                 Round Trip
               </button>
-              <button className="rounded-none rounded-tr-full rounded-br-full btn btn-primary hover:border-white">
+              <button className="rounded-none rounded-tr-full rounded-br-full btn bg-[#4a03a0] text-white hover:border-[#D9D9D9] hover:bg-[#D9D9D9] hover:text-[#4a03a0]">
                 One Way
               </button>
             </div>
@@ -56,7 +62,12 @@ export default function FlightSchedule() {
             {/* Places  */}
             <div className="flex gap-2">
               <label className="flex items-center gap-2 rounded-none rounded-tl-full rounded-bl-full outline-none input input-bordered">
-                <PlaneTakeoff size={24} />
+                <Image
+                  src={PlaneTakeOff}
+                  alt="planeTakeOff"
+                  width={24}
+                  height={24}
+                />
                 <input
                   type="text"
                   className="grow max-lg:w-28"
@@ -64,7 +75,12 @@ export default function FlightSchedule() {
                 />
               </label>
               <label className="flex items-center gap-2 rounded-none rounded-tr-full rounded-br-full outline-none input input-bordered ">
-                <PlaneLanding size={24} />
+                <Image
+                  src={PlaneLanding}
+                  alt="planeLanding"
+                  width={24}
+                  height={24}
+                />
                 <input
                   type="text"
                   className="grow max-lg:w-28 "
@@ -75,7 +91,7 @@ export default function FlightSchedule() {
             {/* Dates */}
             <div className="flex gap-2">
               <label className="flex items-center rounded-none rounded-tl-full rounded-bl-full outline-none input-bordered input">
-                <Calendar size={24} />
+                <Image src={Calender} alt="calender" width={24} height={24} />
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
@@ -83,7 +99,7 @@ export default function FlightSchedule() {
                 />
               </label>
               <label className="flex items-center rounded-none rounded-tr-full rounded-br-full outline-none input-bordered input">
-                <Calendar size={24} />
+                <Image src={Calender} alt="calender" width={24} height={24} />
                 <DatePicker
                   selected={endDate}
                   className="border-none rounded-none rounded-tr-full rounded-br-full outline-none max-lg:w-28 input"
@@ -96,7 +112,7 @@ export default function FlightSchedule() {
           {/* submit */}
           <div>
             <button
-              className="btn btn-primary lg:ml-8 lg:mt-5 max-sm:mt-5 max-sm:ml-20"
+              className="btn bg-[#4a03a0] text-white lg:ml-8 lg:mt-5 max-sm:mt-5 max-sm:ml-20"
               onClick={() => handleOnFlights({ startDate, endDate })}
             >
               Show Flights

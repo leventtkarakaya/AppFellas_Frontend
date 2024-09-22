@@ -10,8 +10,8 @@ import SumUmbrella from "@/public/images/sun-umbrella.png";
 export default function Sidebar() {
   return (
     <>
-      <div className="sticky top-0 mt-8 max-2xl:hidden 3xl:block">
-        <div className="flex flex-col items-center justify-center gap-10 pb-20 xl:p-0">
+      <div className="sticky top-0 right-0 mt-8 max-2xl:hidden 3xl:ml-60 3xl:mt-0 3xl:block">
+        <div className="flex flex-col items-center justify-center gap-10 pb-20 xl:p-0 ">
           <div className="relative flex flex-col gap-2 ">
             <Image
               src={CarBg}

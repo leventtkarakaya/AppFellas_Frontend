@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { X } from "lucide-react";
 import axios from "axios";
 export default function ModalAccDel() {
   const [isloading, setIsloading] = useState(false);
@@ -68,8 +69,12 @@ export default function ModalAccDel() {
         id="my_modal_7"
         className="flex items-center justify-center modal modal-bottom sm:modal-middle"
       >
-        <div className="modal-box ">
-          <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+        <div className="modal-box">
+          <div className="relative max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+            <X
+              className="absolute w-8 h-8 cursor-pointer top-4 right-4 hover:text-red-500"
+              onClick={() => clsBtnHandle()}
+            />
             <div className="max-w-lg mx-auto text-center">
               <h1 className="text-2xl font-bold sm:text-3xl">
                 Hesabınız silmek istediğinize emin misiniz?
@@ -160,12 +165,6 @@ export default function ModalAccDel() {
                   className="inline-block px-5 py-3 text-sm font-medium btn hover:btn-error hover:text-white"
                 >
                   Hesabı Sil
-                </button>
-                <button
-                  onClick={() => clsBtnHandle()}
-                  className="inline-block px-5 py-3 text-sm font-medium text-white rounded-lg bg-primary"
-                >
-                  Çıkış
                 </button>
               </div>
             </form>

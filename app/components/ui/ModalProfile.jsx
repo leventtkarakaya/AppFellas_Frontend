@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { X } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 export default function Modal() {
@@ -75,7 +76,7 @@ export default function Modal() {
   return (
     <>
       <button
-        className="py-3 px-14 btn btn-primary "
+        className="py-3 px-14 btn bg-[#4a03a0] text-white hover:bg-[#4a03a0] hover:text-white "
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
         Profil
@@ -85,7 +86,11 @@ export default function Modal() {
         className="flex items-center justify-center modal modal-bottom sm:modal-middle"
       >
         <div className="modal-box">
-          <div className="p-8 border border-gray-200 rounded">
+          <div className="p-8 border border-gray-200 realative">
+            <X
+              className="absolute top-10 right-10 hover:cursor-pointer hover:text-red-500"
+              onClick={() => closeBtnClick()}
+            />
             <h1 className="text-3xl font-medium">Kullanıcı Profili</h1>
             <p className="mt-6 text-gray-600">
               Kullanıcı bilgilerinizi buradan güncelleyebilirsiniz.
@@ -174,18 +179,12 @@ export default function Modal() {
                   />
                 </div>
               </div>
-              <div className="mt-8 space-x-4">
+              <div className="flex justify-end mt-8">
                 <button
                   type="submit"
                   className="text-white rounded btn btn-success hover:btn-success hover:text-white active:bg-blue-700 disabled:opacity-50"
                 >
                   Kaydet
-                </button>
-                <button
-                  className="text-white bg-red-500 rounded btn hover:btn-error hover:text-white active:bg-blue-700 disabled:opacity-50"
-                  onClick={() => closeBtnClick()}
-                >
-                  Çıkış
                 </button>
               </div>
             </form>

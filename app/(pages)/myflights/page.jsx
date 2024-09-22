@@ -2,11 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Logo from "@/public/images/Logo.png";
 import Link from "next/link";
+import Flight_1 from "@/public/images/UserFlight_1.png";
+import Flight_2 from "@/public/images/UserFlight_2.png";
+import Flight_3 from "@/public/images/UserFlight_3.png";
+import Flight_4 from "@/public/images/UserFlight_4.png";
+import Flight_5 from "@/public/images/UserFlight_5.png";
 import { IoInformationCircleOutline } from "react-icons/io5";
 export default function page() {
   return (
     <>
-      <div className="px-10 py-10">
+      <div className="container p-8 mx-auto md:py-10 md:px-0 2xl:px-40">
         {/* header */}
         <div className="flex items-center justify-between gap-10 ">
           <Link href={"/"}>
@@ -19,24 +24,24 @@ export default function page() {
             />
           </Link>
           <div className="flex items-center">
-            <nav className="flex items-center justify-center">
-              <ul className="flex items-center gap-5">
+            <nav className="flex items-center justify-center md:mr-20">
+              <ul className="flex items-center font-bold gap-x-12 ">
                 <li>
                   <a href="#">Times</a>
                 </li>
                 <li>
-                  <a href="#">Flights</a>
+                  <a href="#">Stops</a>
                 </li>
                 <li>
-                  <a href="#">Flights</a>
+                  <a href="#">Airlines</a>
                 </li>
                 <li>
-                  <a href="#">Flights</a>
+                  <a href="#">Airports</a>
                 </li>
                 <li>
-                  <a href="#">Flights</a>
+                  <a href="#">Amenties</a>
                 </li>
-                <select className="w-full max-w-xs text-blue-500 outline-none select select-bordered">
+                <select className="w-full max-w-xs text-blue-500 border-none outline-none select select-bordered">
                   <option defaultChecked value={"Edit Search"}>
                     Edit Search
                   </option>
@@ -46,203 +51,203 @@ export default function page() {
               </ul>
             </nav>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-10 max-lg:hidden ">
             {/* Rating */}
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col rating">
-                <div>
+            <div className="flex flex-col gap-2 ">
+              <div className="flex flex-col rating rating-sm ">
+                <div className="md:flex">
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2 text-[10px]"
                     defaultChecked
                   />
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
                 <div>
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-2"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
               </div>
             </div>
             {/* Rating */}
             <div className="flex flex-col gap-2">
-              <div className="flex flex-col rating">
-                <div>
+              <div className="flex flex-col rating rating-sm">
+                <div className="md:flex">
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                     defaultChecked
                   />
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
                 <div>
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-3"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
               </div>
             </div>
             {/* Rating */}
             <div className="flex flex-col gap-2">
-              <div className="flex flex-col rating">
-                <div>
+              <div className="flex flex-col rating rating-sm">
+                <div className="md:flex">
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                     defaultChecked
                   />
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
                 <div>
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-4"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
               </div>
             </div>
             {/* Rating */}
             <div className="flex flex-col gap-2">
-              <div className="flex flex-col rating">
-                <div className="">
+              <div className="flex flex-col rating rating-sm">
+                <div className="md:flex">
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                     defaultChecked
                   />
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
                 <div>
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-5"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
               </div>
             </div>
             {/* Rating */}
             <div className="flex flex-col gap-2">
-              <div className="flex flex-col rating">
-                <div>
+              <div className="flex flex-col rating rating-sm">
+                <div className="md:flex">
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                     defaultChecked
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
                 <div>
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                   <input
                     type="radio"
                     name="rating-6"
-                    className="bg-orange-400 mask mask-star-2"
+                    className="bg-black mask mask-star-2"
                   />
                 </div>
               </div>
@@ -252,7 +257,7 @@ export default function page() {
         {/* input */}
         <div className="flex items-center justify-between px-10 mt-20">
           <div className="flex items-center gap-2">
-            <p>{`SortBy:`} </p>
+            <p className="font-sans text-xl font-semibold">{`SortBy:`} </p>
             <select className="w-full max-w-xs font-bold select select-bordered">
               <option defaultChecked>Recommended</option>
               <option>Han Solo</option>
@@ -261,23 +266,23 @@ export default function page() {
           </div>
           <div className="flex items-center gap-2">
             <IoInformationCircleOutline size={25} className="text-blue-500" />
-            <span>Avg Fare: $250</span>
+            <p className="font-sans">
+              Avg Fare: <span className="font-bold">$250</span>
+            </p>
           </div>
         </div>
-        {/* content */}
         {/* content table */}
-        <div className="container p-2 mx-auto mt-10">
-          {/* content table 1 */}
-          <div className="flex items-center justify-between gap-5 mt-10">
-            <div className="flex items-center gap-5">
+        <div className="container p-2 mx-auto mt-10 md:flex md:flex-col md:gap-5 ">
+          <div className="flex items-center justify-between gap-5 mt-10 ">
+            <div className="flex items-center gap-5 ">
               <div className="mb-16">
-                <Image src={Logo} alt="Logo" width={80} height={80} />
+                <Image src={Flight_1} alt="Logo" width={150} height={150} />
               </div>
-              <div className="flex flex-col gap-y-5">
-                <span>7:30 AM - 9:12 AM</span>
-                <div className="flex items-center gap-x-10">
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5">
+                <p className="text-3xl">7:30 AM - 9:12 AM</p>
+                <div className="flex items-center gap-x-10 lg:gap-x-28">
                   <div className="flex flex-col gap-y-2">
-                    <p>Delta Air Lines</p>
+                    <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -286,44 +291,45 @@ export default function page() {
                     </select>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>Nonstap</span>
+                    <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>SFO to LAX</span>
+                    <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-28">
-              <div className="flex gap-5">
+            <div className="flex gap-40">
+              <div className="flex gap-20">
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$156</span>
+                  <span>Main </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$204</span>
+                  <span>Confort+</span>
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <span>$156</span>
-                <span>Main</span>
+                <span className="text-xl font-bold">$386</span>
+                <span>Detla One</span>
               </div>
             </div>
           </div>
+          <hr className="text-black border" />
           <div className="flex items-center justify-between gap-5 mt-10">
             <div className="flex items-center gap-5">
               <div className="mb-16">
-                <Image src={Logo} alt="Logo" width={80} height={80} />
+                <Image src={Flight_2} alt="Logo" width={150} height={150} />
               </div>
-              <div className="flex flex-col gap-y-5">
-                <span>7:30 AM - 9:12 AM</span>
-                <div className="flex items-center gap-x-10">
+              <div className="flex flex-col md:w-full gap-y-5">
+                <p className="text-3xl">7:30 AM - 9:12 AM</p>
+                <div className="flex items-center gap-x-10 lg:gap-x-28">
                   <div className="flex flex-col gap-y-2">
-                    <p>Delta Air Lines</p>
+                    <p className="font-bold"> Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -332,44 +338,45 @@ export default function page() {
                     </select>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>Nonstap</span>
+                    <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>SFO to LAX</span>
+                    <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-28">
-              <div className="flex gap-5">
+            <div className="flex gap-40">
+              <div className="flex gap-20">
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$156</span>
+                  <span>Main </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$204</span>
+                  <span>Confort+</span>
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <span>$156</span>
-                <span>Main</span>
+                <span className="text-xl font-bold">$386</span>
+                <span>Detla One</span>
               </div>
             </div>
           </div>
+          <hr className="text-black border" />
           <div className="flex items-center justify-between gap-5 mt-10">
             <div className="flex items-center gap-5">
               <div className="mb-16">
-                <Image src={Logo} alt="Logo" width={80} height={80} />
+                <Image src={Flight_3} alt="Logo" width={150} height={150} />
               </div>
-              <div className="flex flex-col gap-y-5">
-                <span>7:30 AM - 9:12 AM</span>
-                <div className="flex items-center gap-x-10">
+              <div className="flex flex-col md:w-full gap-y-5">
+                <p className="text-3xl">7:30 AM - 9:12 AM</p>
+                <div className="flex items-center gap-x-10 lg:gap-x-28">
                   <div className="flex flex-col gap-y-2">
-                    <p>Delta Air Lines</p>
+                    <p className="font-bold"> Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -378,44 +385,45 @@ export default function page() {
                     </select>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>Nonstap</span>
+                    <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>SFO to LAX</span>
+                    <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-28">
-              <div className="flex gap-5">
+            <div className="flex gap-40">
+              <div className="flex gap-20">
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$156</span>
+                  <span>Main </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$204</span>
+                  <span>Confort+</span>
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <span>$156</span>
-                <span>Main</span>
+                <span className="text-xl font-bold">$386</span>
+                <span>Detla One</span>
               </div>
             </div>
           </div>
+          <hr className="text-black border" />
           <div className="flex items-center justify-between gap-5 mt-10">
             <div className="flex items-center gap-5">
               <div className="mb-16">
-                <Image src={Logo} alt="Logo" width={80} height={80} />
+                <Image src={Flight_4} alt="Logo" width={150} height={150} />
               </div>
-              <div className="flex flex-col gap-y-5">
-                <span>7:30 AM - 9:12 AM</span>
-                <div className="flex items-center gap-x-10">
+              <div className="flex flex-col md:w-full gap-y-5">
+                <p className="text-3xl">7:30 AM - 9:12 AM</p>
+                <div className="flex items-center gap-x-10 lg:gap-x-28">
                   <div className="flex flex-col gap-y-2">
-                    <p>Delta Air Lines</p>
+                    <p className="font-bold"> Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -424,36 +432,83 @@ export default function page() {
                     </select>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>Nonstap</span>
+                    <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
                   <div className="flex flex-col gap-y-3">
-                    <span>SFO to LAX</span>
+                    <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-28">
-              <div className="flex gap-5">
+            <div className="flex gap-40">
+              <div className="flex gap-20">
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$156</span>
+                  <span>Main </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span>$156</span>
-                  <span>Main</span>
+                  <span className="text-xl font-bold">$204</span>
+                  <span>Confort+</span>
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <span>$156</span>
-                <span>Main</span>
+                <span className="text-xl font-bold">$386</span>
+                <span>Detla One</span>
+              </div>
+            </div>
+          </div>
+          <hr className="text-black border" />
+          <div className="flex items-center justify-between gap-5 mt-10">
+            <div className="flex items-center gap-5">
+              <div className="mb-16">
+                <Image src={Flight_5} alt="Logo" width={150} height={150} />
+              </div>
+              <div className="flex flex-col md:w-full gap-y-5 lg:gap-x-28">
+                <p className="text-3xl">7:30 AM - 9:12 AM</p>
+                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                  <div className="flex flex-col gap-y-2">
+                    <p className="font-bold"> Delta Air Lines</p>
+                    <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
+                      <option defaultChecked>Small</option>
+                      <option>Deneme 1</option>
+                      <option>Deneme 2</option>
+                      <option>Deneme 3</option>
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-y-3">
+                    <p className="font-bold">Nonstap</p>
+                    <p>1h 15 min</p>
+                  </div>
+                  <div className="flex flex-col gap-y-3">
+                    <p className="font-bold">SFO to LAX</p>
+                    <p>DL 1443</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* content table 2 */}
+            <div className="flex gap-40">
+              <div className="flex gap-20">
+                <div className="flex flex-col gap-2">
+                  <span className="text-xl font-bold">$156</span>
+                  <span>Main </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-xl font-bold">$204</span>
+                  <span>Confort+</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span className="text-xl font-bold">$386</span>
+                <span>Detla One</span>
               </div>
             </div>
           </div>
         </div>
-        {/* content */}
+        {/* content table */}
       </div>
     </>
   );

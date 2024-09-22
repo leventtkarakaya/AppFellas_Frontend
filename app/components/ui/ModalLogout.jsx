@@ -23,12 +23,18 @@ export default function ModalLogout({ userClear, dispatch }) {
           </h3>
           <p className="py-4">Çıkış yapmak için tıklayınız.</p>
           <div className="modal-action">
-            <form method="dialog">
+            <form method="dialog" className="flex gap-x-5">
               <button
                 className="bg-[#79797979] text-white btn hover:btn-error hover:text-white"
                 onClick={() => handleLogout()}
               >
-                Çıkış Yap
+                Hesaptan Çık
+              </button>
+              <button
+                className="bg-[#79797979] text-white btn hover:btn-error hover:text-white"
+                onClick={() => document.getElementById("my_modal_6").close()}
+              >
+                İptal
               </button>
             </form>
           </div>

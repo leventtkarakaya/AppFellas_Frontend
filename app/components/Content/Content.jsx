@@ -6,13 +6,13 @@ import Sidebar from "./ContentSidebar";
 export default function Content() {
   return (
     <>
-      <div className="p-8">
+      <div>
         <div className="flex w-full">
           {/* Content 1 */}
           <div>
             <FlightSchedule />
             {/* Flights start */}
-            <div className="flex w-full">
+            <div className="flex">
               <div>
                 <FlightDetails />
               </div>
@@ -23,7 +23,7 @@ export default function Content() {
             {/* Flights end */}
           </div>
           {/* Content 2 */}
-          <div className="w-1/4 ">
+          <div>
             <Sidebar />
           </div>
         </div>
