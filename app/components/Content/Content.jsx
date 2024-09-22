@@ -7,23 +7,23 @@ export default function Content() {
   return (
     <>
       <div className="p-8">
-        <div className="flex w-full ">
+        <div className="flex w-full">
           {/* Content 1 */}
-          <div className="w-3/4 ">
+          <div>
             <FlightSchedule />
             {/* Flights start */}
-            <div className="flex w-full ">
-              <div className="w-2/3">
+            <div className="flex w-full">
+              <div>
                 <FlightDetails />
               </div>
-              <div className="w-1/3">
+              <div>
                 <FlightCheckBox />
               </div>
             </div>
             {/* Flights end */}
           </div>
           {/* Content 2 */}
-          <div className="w-1/4">
+          <div className="w-1/4 ">
             <Sidebar />
           </div>
         </div>

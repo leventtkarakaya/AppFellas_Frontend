@@ -3,7 +3,7 @@ import React from "react";
 export default function ContentCheckbox() {
   return (
     <>
-      <div className="sticky top-0">
+      <div className="sticky top-0 lg:ml-60 lg:w-full max-md:hidden">
         <div className="p-10 mt-10">
           <p className="mb-6">Sort By:</p>
           <select className="w-full max-w-xs border-none outline-none select select-bordered">

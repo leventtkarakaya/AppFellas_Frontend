@@ -134,7 +134,7 @@ export default function page() {
                 name="password"
                 value={value.password}
                 onChange={handleValueChange}
-                type="text"
+                type="password"
                 placeholder="Şifre"
                 className="px-24 pl-2 border-none outline-none"
                 required
@@ -147,7 +147,7 @@ export default function page() {
                 name="passwordConfirm"
                 value={value.passwordConfirm}
                 onChange={handleValueChange}
-                type="text"
+                type="password"
                 placeholder="Şifre Tekrar"
                 className="px-24 pl-2 border-none outline-none"
                 required

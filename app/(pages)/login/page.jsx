@@ -8,7 +8,7 @@ import emial from "@/public/images/mail.png";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
-import { setUser } from "@/app/redux/userSlice";
+import { setUser } from "@/app/redux/slice/userSlice";
 import { useDispatch } from "react-redux";
 export default function page() {
   const [isloading, setIsloading] = useState(false);
@@ -21,7 +21,6 @@ export default function page() {
 
   const handleValueChange = (e) => {
     setValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    console.log("🚀 ~ handleValueChange ~ value:", value);
   };
 
   const handleOnSubmit = async (e) => {
@@ -35,7 +34,6 @@ export default function page() {
           password: value.password,
         }
       );
-      console.log("🚀 ~ handleOnSubmit ~ response:", response);
       setIsloading(false);
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
@@ -90,7 +88,7 @@ export default function page() {
                 name="password"
                 value={value.password}
                 onChange={handleValueChange}
-                type="text"
+                type="password"
                 placeholder="Şifre"
                 className="pl-2 border-none outline-none"
                 required
