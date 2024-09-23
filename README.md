@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proje Yapısı ve Çalışma Süreci Üzerine Kısa Bir Değerlendirme
 
-## Getting Started
+Bu proje, iki ana bileşen olan backend ve frontend'den oluşmaktadır. Projenin başarılı bir şekilde çalışabilmesi için öncelikle backend kısmının başlatılması gerekmektedir. Bunun için terminalde `npm start` komutu kullanılarak backend projesi aktive edilir. Ardından, frontend'in çalışabilmesi için yine terminalde `npm run dev` komutu ile frontend bileşeni devreye alınacaktır.
 
-First, run the development server:
+![image](resim1.png) <!-- Backend Projesi Aktif Edilmesi -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frontend kısmında, Next.js, DaisyUI ve TailwindCSS gibi modern teknolojiler kullanılmıştır. Bunun yanı sıra, durumlardaki yönetim için Redux Toolkit ve redux-persist uygulanmıştır. Proje içerisinde kullanıcıların işlemlerini gerçekleştirmesi için Axios kütüphanesi ile API çağrıları yapılmaktadır.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](resim2.png) <!-- Frontend Bileşenleri -->
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Kullanıcılar, frontend arabirimi üzerinden çeşitli işlemleri gerçekleştirebilmektedir. Bu işlemler arasında üye olma, üye girişi, hesap bilgilerinin güncellenmesi, hesaptan çıkış yapma ve hesap silme gibi temel işlemler bulunmaktadır. Ayrıca, ana sayfa üzerinden uçuş bilgileri gibi özel bilgilere ulaşmaları sağlanmaktadır.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](resim3.png) <!-- Kullanıcı İşlemleri -->
 
-## Learn More
+Backend tarafında ise, Node.js, Express.js ve MongoDB gibi güvenilir teknolojilerden yararlanılmıştır. Projenin yapısına dair önemli bileşenler arasında model, controller, router ve config dosyaları yer almaktadır. Modeller, veritabanı yapısını tanımlarken, controller'lar iş mantığının uygulandığı alanlardır. Router'lar ise API uç noktalarının yönetimini sağlar. Config dosyası ise veritabanı bağlantılarının düzenlendiği yerdir.
 
-To learn more about Next.js, take a look at the following resources:
+![image](resim4.png) <!-- Backend Yapısı -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Sonuç olarak, bu proje, hem frontend hem de backend bileşenleri ile modern web teknolojilerini etkin bir şekilde kullanarak, kullanıcı dostu bir deneyim sunmayı hedeflemektedir. Proje yapısının her iki tarafı da işlevsel ve uyumlu bir şekilde tasarlanmıştır.

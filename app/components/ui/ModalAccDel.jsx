@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 import axios from "axios";
+import Swal from "sweetalert2";
 export default function ModalAccDel() {
   const [isloading, setIsloading] = useState(false);
   const [value, setValue] = useState({
@@ -54,7 +55,13 @@ export default function ModalAccDel() {
         window.location.reload();
       }
     } catch (error) {
-      console.log("🚀 ~ handleOnSubmit ~ error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Hata oluştu,sonra tekrar deneyin.",
+        text: error.response.data.message,
+        showConfirmButton: false,
+        timer: 3000,
+      });
     }
   };
   return (

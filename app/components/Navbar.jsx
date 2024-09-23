@@ -14,8 +14,10 @@ import { clearUser } from "@/app/redux/slice/userSlice";
 import MenuBtn from "@/app/components/MenuBtn";
 
 export default function Navbar() {
+  /* Redux persist ile kullaınıcı bilgilerini alıyoruz z */
   const user = localStorage.getItem("persist:auth");
   let userPersist = "";
+  /* Kullanıcı bilgilerini parse ediyoruz */
   if (user) {
     const userUpdated = JSON.parse(user);
     const persistedUser = JSON.parse(userUpdated?.user);
@@ -31,13 +33,13 @@ export default function Navbar() {
             <Image
               src={Logo}
               alt="Logo"
-              width={80}
-              height={80}
+              width={120}
+              height={120}
               className="max-md:w-16 max-md:h-16"
               priority
             />
           </a>
-          <p className="mb-3 text-2xl font-bold text-black uppercase">
+          <p className="text-2xl font-bold text-black uppercase ">
             Plane Scape
           </p>
         </div>
@@ -85,6 +87,7 @@ export default function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content flex items-center justify-center flex-col gap-5 bg-base-100 rounded-box z-[1] mt-3 w-48 p-2 shadow"
             >
+              {/* Kullanıcının uyesi olup olmaması durumuna göre uyesinin görüntülenmesi */}
               {userPersist === null ? (
                 <li>
                   <a
@@ -123,11 +126,11 @@ export default function Navbar() {
             </ul>
           </div>
           {/* Dropdown end*/}
-          {/* Menu Button start */}
+          {/* Menu Button start Mobile View */}
           <div className="md:hidden max-md:mb-3">
             <MenuBtn />
           </div>
-          {/* Menu Button end */}
+          {/* Menu Button end Mobile View */}
         </div>
       </div>
     </>

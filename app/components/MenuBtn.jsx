@@ -2,13 +2,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "@/public/images/Logo.png";
-import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import MenuIcon from "@/public/images/MenuBtnIcon.png";
 
 export default function MenuBtn() {
   const [activeMenu, setActiveMenu] = useState(false);
-
   const user = localStorage.getItem("persist:auth");
   let userPersist = "";
   if (user) {

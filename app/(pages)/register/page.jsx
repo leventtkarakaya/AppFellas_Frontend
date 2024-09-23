@@ -13,9 +13,13 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 export default function page() {
+  /* Yonlendirme */
   const router = useRouter();
+  /* Phone number degisince tetiklenen fonksiyon */
   const [phoneNumber, setPhoneNumber] = useState("");
+
   const [isloading, setIsloading] = useState(false);
+  /* İnput alanların value ile degerlerini tutan fonksiyon */
   const [value, setValue] = useState({
     name: "",
     surname: "",
@@ -24,15 +28,16 @@ export default function page() {
     password: "",
     passwordConfirm: "",
   });
-
+  /* İnput alanların value ile degerlerini alan fonksiyon */
   const handleValueChange = (e) => {
     setValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  /* Phone number degisince tetiklenen fonksiyon */
   const handleChange = (phone) => {
     setPhoneNumber(phone);
     value.phone = phone;
   };
-
+  /* Uye ol butonuna tıklandıgında tetiklenen istek */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

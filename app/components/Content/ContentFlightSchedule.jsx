@@ -43,7 +43,7 @@ export default function FlightSchedule() {
           <div className="flex items-center justify-between p-5 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:p-0 ">
             <div className="flex items-center gap-2">
               <Image src={Airplane} alt="airplane" width={40} height={40} />
-              <h1 className="text-3xl font-semibold uppercase">
+              <h1 className="text-2xl font-semibold uppercase">
                 Book your Flight
               </h1>
             </div>
@@ -112,7 +112,7 @@ export default function FlightSchedule() {
           {/* submit */}
           <div>
             <button
-              className="btn bg-[#4a03a0] text-white lg:ml-8 lg:mt-5 max-sm:mt-5 max-sm:ml-20"
+              className="btn bg-[#4a03a0] text-white lg:ml-8 lg:mt-5 max-sm:mt-5 max-sm:ml-28"
               onClick={() => handleOnFlights({ startDate, endDate })}
             >
               Show Flights

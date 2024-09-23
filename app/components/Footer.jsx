@@ -42,7 +42,7 @@ export default function Footer() {
                   <li>
                     <a
                       className="block pb-2 text-sm font-semibold text-gray-600 hover:text-gray-800"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                      href="#"
                     >
                       Hakkımızda
                     </a>
@@ -50,7 +50,7 @@ export default function Footer() {
                   <li>
                     <a
                       className="block pb-2 text-sm font-semibold text-gray-600 hover:text-gray-800"
-                      href="https://blog.creative-tim.com?ref=njs-profile"
+                      href="#"
                     >
                       Blog
                     </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                   <li>
                     <a
                       className="block pb-2 text-sm font-semibold text-gray-600 hover:text-gray-800"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile"
+                      href="#"
                     >
                       İnsan Kaynakları
                     </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                   <li>
                     <a
                       className="block pb-2 text-sm font-semibold text-gray-600 hover:text-gray-800"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
+                      href="#"
                     >
                       Şirket Gelenegi
                     </a>
@@ -121,7 +121,7 @@ export default function Footer() {
             <div className="py-1 text-sm font-semibold text-gray-500">
               Copyright © <span id="get-current-year">2024</span>
               <a
-                href="https://www.creative-tim.com/product/notus-js"
+                href="#"
                 className="text-gray-500 hover:text-gray-800"
                 target="_blank"
                 rel="noopener noreferrer"

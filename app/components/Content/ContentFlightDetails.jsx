@@ -1,24 +1,20 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
-import { PlaneLanding, PlaneTakeoff } from "lucide-react";
-import IconFligth from "@/public/images/ContentFlightIcon.png";
-import { useSelector } from "react-redux";
+import PlaneTakeOff from "@/public/images/PlaneTakeOff.png";
+import PlaneLanding from "@/public/images/PlaneLanding.png";
+import IconFligth from "@/public/images/airplane.png";
 import moment from "moment";
+import { useSelector } from "react-redux";
 export default function ContentFlightDetails() {
+  /* Redux State */
   const flights = useSelector((state) => state.flights.flightsData);
+  /* Redux State gelen state javascript ile array olarak döndürülüyor */
   const flightList = Array.isArray(flights) ? flights : [];
-  const buttonRef = useRef({
-    date: null,
-    time: null,
-    air: null,
-    location: null,
-    price: null,
-  });
-  console.log("🚀 ~ ContentFlightDetails ~ buttonRef:", buttonRef);
   return (
     <>
       <div className="my-20 lg:ml-16 lg:w-full">
+        {/* Flights List Map */}
         {flightList.length > 0 ? (
           flights?.map((item, index) => {
             return (
@@ -33,7 +29,12 @@ export default function ContentFlightDetails() {
                 <div className="flex items-center justify-between gap-10 max-sm:flex max-sm:flex-col ">
                   <div className="flex flex-col gap-4">
                     <div className="flex gap-2">
-                      <PlaneTakeoff size={24} />
+                      <Image
+                        src={PlaneTakeOff}
+                        alt="plane"
+                        width={25}
+                        height={25}
+                      />
                       <p>Departure</p>
                     </div>
                     <p className="text-lg font-bold">
@@ -57,7 +58,7 @@ export default function ContentFlightDetails() {
                       height={25}
                       className="ml-3"
                     />
-                    <p>
+                    <p className="text-lg font-medium xl:-ml-10">
                       {`${moment(item?.actualLandingTime).format(
                         "hh:mm "
                       )} (Nonstop)`}
@@ -68,7 +69,12 @@ export default function ContentFlightDetails() {
                   {/* Line */}
                   <div className="flex flex-col gap-5">
                     <div className="flex gap-2">
-                      <PlaneLanding size={24} />
+                      <Image
+                        src={PlaneLanding}
+                        alt="plane"
+                        width={25}
+                        height={25}
+                      />
                       <p>Arrival</p>
                     </div>
                     <p className="text-lg font-bold">
@@ -82,7 +88,7 @@ export default function ContentFlightDetails() {
                   </div>
                 </div>
                 {/* Flight Details */} {/* Flight Price && Btn */}
-                <div className="flex items-center justify-between gap-10">
+                <div className="flex items-center justify-between gap-10 max-sm:ml-5">
                   <div className="flex flex-col gap-2">
                     <p className="text-xl font-bold text-[#4a03a0]">
                       Price: $100
@@ -104,7 +110,7 @@ export default function ContentFlightDetails() {
           })
         ) : (
           <div className="my-20 lg:ml-60 lg:w-full">
-            <p>Uçak Listesi için arama yapın</p>
+            <p> Uçak Listesi için arama yapın</p>
           </div>
         )}
       </div>

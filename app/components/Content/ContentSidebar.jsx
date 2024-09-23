@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +11,12 @@ import SumUmbrella from "@/public/images/sun-umbrella.png";
 export default function Sidebar() {
   return (
     <>
-      <div className="sticky top-0 right-0 mt-8 max-2xl:hidden 3xl:ml-60 3xl:mt-0 3xl:block">
+      <div className="sticky top-0 right-0 mt-8 mb-2 max-2xl:hidden 3xl:ml-60 3xl:mt-0 3xl:block">
         <div className="flex flex-col items-center justify-center gap-10 pb-20 xl:p-0 ">
-          <div className="relative flex flex-col gap-2 ">
+          <div
+            className="relative flex flex-col gap-2 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
             <Image
               src={CarBg}
               alt="carBg"
@@ -25,7 +29,10 @@ export default function Sidebar() {
               <p className="font-bold text-white uppercase">Car Rental</p>
             </div>
           </div>
-          <div className="relative flex flex-col gap-2 ">
+          <div
+            className="relative flex flex-col gap-2 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
             <Image
               src={HotelBg}
               alt="hotelBg"
@@ -38,7 +45,10 @@ export default function Sidebar() {
               <p className="font-bold text-white uppercase">Hotels</p>
             </div>
           </div>
-          <div className="relative flex flex-col gap-2 ">
+          <div
+            className="relative flex flex-col gap-2 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
             <Image
               src={SumUmbrellaBg}
               alt="sumUmbrellaBg"

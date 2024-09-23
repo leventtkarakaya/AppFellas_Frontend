@@ -8,12 +8,13 @@ import Flight_3 from "@/public/images/UserFlight_3.png";
 import Flight_4 from "@/public/images/UserFlight_4.png";
 import Flight_5 from "@/public/images/UserFlight_5.png";
 import { IoInformationCircleOutline } from "react-icons/io5";
+import MenuBtn from "@/app/components/MenuBtn";
 export default function page() {
   return (
     <>
       <div className="container p-8 mx-auto md:py-10 md:px-0 2xl:px-40">
         {/* header */}
-        <div className="flex items-center justify-between gap-10 ">
+        <div className="flex items-center justify-between gap-10 max-sm:flex max-sm:items-center ">
           <Link href={"/"}>
             <Image
               src={Logo}
@@ -23,7 +24,7 @@ export default function page() {
               className="max-md:w-16 max-md:h-16"
             />
           </Link>
-          <div className="flex items-center">
+          <div className="flex items-center max-sm:hidden">
             <nav className="flex items-center justify-center md:mr-20">
               <ul className="flex items-center font-bold gap-x-12 ">
                 <li>
@@ -51,7 +52,7 @@ export default function page() {
               </ul>
             </nav>
           </div>
-          <div className="flex gap-10 max-lg:hidden ">
+          <div className="flex gap-10 max-lg:hidden max-sm:hidden">
             {/* Rating */}
             <div className="flex flex-col gap-2 ">
               <div className="flex flex-col rating rating-sm ">
@@ -253,18 +254,22 @@ export default function page() {
               </div>
             </div>
           </div>
+          {/* MenuBtn */}
+          <div className="mb-6 md:hidden">
+            <MenuBtn />
+          </div>
         </div>
         {/* input */}
-        <div className="flex items-center justify-between px-10 mt-20">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between px-10 mt-20 max-sm:flex max-sm:items-center max-sm:gap-x-5 max-sm:flex-col">
+          <div className="flex items-center gap-2 max-sm:flex max-sm:flex-col max-sm:w-full ">
             <p className="font-sans text-xl font-semibold">{`SortBy:`} </p>
-            <select className="w-full max-w-xs font-bold select select-bordered">
+            <select className="w-full max-w-xs font-bold select ">
               <option defaultChecked>Recommended</option>
               <option>Han Solo</option>
               <option>Greedo</option>
             </select>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 max-sm:w-full max-sm:flex max-sm:flex-col">
             <IoInformationCircleOutline size={25} className="text-blue-500" />
             <p className="font-sans">
               Avg Fare: <span className="font-bold">$250</span>
@@ -273,14 +278,22 @@ export default function page() {
         </div>
         {/* content table */}
         <div className="container p-2 mx-auto mt-10 md:flex md:flex-col md:gap-5 ">
-          <div className="flex items-center justify-between gap-5 mt-10 ">
-            <div className="flex items-center gap-5 ">
-              <div className="mb-16">
-                <Image src={Flight_1} alt="Logo" width={150} height={150} />
+          <div className="flex items-center justify-between gap-5 mt-10 max-sm:flex max-sm:flex-col max-sm:items-start max-sm:px-5 ">
+            <div className="flex items-center gap-5 max-sm:flex max-sm:flex-col ">
+              {/* Logo */}
+              <div className="mb-16 max-sm:-mb-8 ">
+                <Image
+                  src={Flight_1}
+                  alt="Logo"
+                  width={150}
+                  height={150}
+                  className="max-sm:text-xl"
+                />
               </div>
-              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5">
+              {/* 2 */}
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5 ">
                 <p className="text-3xl">7:30 AM - 9:12 AM</p>
-                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                <div className="flex items-center gap-x-10 lg:gap-x-28 max-sm:flex-col max-sm:w-full max-sm:gap-y-2">
                   <div className="flex flex-col gap-y-2">
                     <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
@@ -290,11 +303,11 @@ export default function page() {
                       <option>Deneme 3</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 ">
                     <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:items-center">
                     <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
@@ -302,8 +315,8 @@ export default function page() {
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-40">
-              <div className="flex gap-20">
+            <div className="flex gap-40 max-sm:flex max-sm:justify-start max-sm:w-full max-sm:gap-16">
+              <div className="flex gap-20 max-sm:gap-6">
                 <div className="flex flex-col gap-2">
                   <span className="text-xl font-bold">$156</span>
                   <span>Main </span>
@@ -320,16 +333,24 @@ export default function page() {
             </div>
           </div>
           <hr className="text-black border" />
-          <div className="flex items-center justify-between gap-5 mt-10">
-            <div className="flex items-center gap-5">
-              <div className="mb-16">
-                <Image src={Flight_2} alt="Logo" width={150} height={150} />
+          <div className="flex items-center justify-between gap-5 mt-10 max-sm:flex max-sm:flex-col max-sm:items-start max-sm:px-5 ">
+            <div className="flex items-center gap-5 max-sm:flex max-sm:flex-col ">
+              {/* Logo */}
+              <div className="mb-16 max-sm:-mb-8 ">
+                <Image
+                  src={Flight_2}
+                  alt="Logo"
+                  width={150}
+                  height={150}
+                  className="max-sm:text-xl"
+                />
               </div>
-              <div className="flex flex-col md:w-full gap-y-5">
+              {/* 2 */}
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5 ">
                 <p className="text-3xl">7:30 AM - 9:12 AM</p>
-                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                <div className="flex items-center gap-x-10 lg:gap-x-28 max-sm:flex-col max-sm:w-full max-sm:gap-y-2">
                   <div className="flex flex-col gap-y-2">
-                    <p className="font-bold"> Delta Air Lines</p>
+                    <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -337,11 +358,11 @@ export default function page() {
                       <option>Deneme 3</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 ">
                     <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:items-center">
                     <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
@@ -349,8 +370,8 @@ export default function page() {
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-40">
-              <div className="flex gap-20">
+            <div className="flex gap-40 max-sm:flex max-sm:justify-start max-sm:w-full max-sm:gap-16">
+              <div className="flex gap-20 max-sm:gap-6">
                 <div className="flex flex-col gap-2">
                   <span className="text-xl font-bold">$156</span>
                   <span>Main </span>
@@ -367,16 +388,24 @@ export default function page() {
             </div>
           </div>
           <hr className="text-black border" />
-          <div className="flex items-center justify-between gap-5 mt-10">
-            <div className="flex items-center gap-5">
-              <div className="mb-16">
-                <Image src={Flight_3} alt="Logo" width={150} height={150} />
+          <div className="flex items-center justify-between gap-5 mt-10 max-sm:flex max-sm:flex-col max-sm:items-start max-sm:px-5 ">
+            <div className="flex items-center gap-5 max-sm:flex max-sm:flex-col ">
+              {/* Logo */}
+              <div className="mb-16 max-sm:-mb-8 ">
+                <Image
+                  src={Flight_3}
+                  alt="Logo"
+                  width={150}
+                  height={150}
+                  className="max-sm:text-xl"
+                />
               </div>
-              <div className="flex flex-col md:w-full gap-y-5">
+              {/* 2 */}
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5 ">
                 <p className="text-3xl">7:30 AM - 9:12 AM</p>
-                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                <div className="flex items-center gap-x-10 lg:gap-x-28 max-sm:flex-col max-sm:w-full max-sm:gap-y-2">
                   <div className="flex flex-col gap-y-2">
-                    <p className="font-bold"> Delta Air Lines</p>
+                    <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -384,11 +413,11 @@ export default function page() {
                       <option>Deneme 3</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 ">
                     <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:items-center">
                     <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
@@ -396,8 +425,8 @@ export default function page() {
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-40">
-              <div className="flex gap-20">
+            <div className="flex gap-40 max-sm:flex max-sm:justify-start max-sm:w-full max-sm:gap-16">
+              <div className="flex gap-20 max-sm:gap-6">
                 <div className="flex flex-col gap-2">
                   <span className="text-xl font-bold">$156</span>
                   <span>Main </span>
@@ -414,16 +443,24 @@ export default function page() {
             </div>
           </div>
           <hr className="text-black border" />
-          <div className="flex items-center justify-between gap-5 mt-10">
-            <div className="flex items-center gap-5">
-              <div className="mb-16">
-                <Image src={Flight_4} alt="Logo" width={150} height={150} />
+          <div className="flex items-center justify-between gap-5 mt-10 max-sm:flex max-sm:flex-col max-sm:items-start max-sm:px-5 ">
+            <div className="flex items-center gap-5 max-sm:flex max-sm:flex-col ">
+              {/* Logo */}
+              <div className="mb-16 max-sm:-mb-8 ">
+                <Image
+                  src={Flight_4}
+                  alt="Logo"
+                  width={150}
+                  height={150}
+                  className="max-sm:text-xl"
+                />
               </div>
-              <div className="flex flex-col md:w-full gap-y-5">
+              {/* 2 */}
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5 ">
                 <p className="text-3xl">7:30 AM - 9:12 AM</p>
-                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                <div className="flex items-center gap-x-10 lg:gap-x-28 max-sm:flex-col max-sm:w-full max-sm:gap-y-2">
                   <div className="flex flex-col gap-y-2">
-                    <p className="font-bold"> Delta Air Lines</p>
+                    <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -431,11 +468,11 @@ export default function page() {
                       <option>Deneme 3</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 ">
                     <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:items-center">
                     <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
@@ -443,8 +480,8 @@ export default function page() {
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-40">
-              <div className="flex gap-20">
+            <div className="flex gap-40 max-sm:flex max-sm:justify-start max-sm:w-full max-sm:gap-16">
+              <div className="flex gap-20 max-sm:gap-6">
                 <div className="flex flex-col gap-2">
                   <span className="text-xl font-bold">$156</span>
                   <span>Main </span>
@@ -461,16 +498,24 @@ export default function page() {
             </div>
           </div>
           <hr className="text-black border" />
-          <div className="flex items-center justify-between gap-5 mt-10">
-            <div className="flex items-center gap-5">
-              <div className="mb-16">
-                <Image src={Flight_5} alt="Logo" width={150} height={150} />
+          <div className="flex items-center justify-between gap-5 mt-10 max-sm:flex max-sm:flex-col max-sm:items-start max-sm:px-5 ">
+            <div className="flex items-center gap-5 max-sm:flex max-sm:flex-col ">
+              {/* Logo */}
+              <div className="mb-16 max-sm:-mb-8 ">
+                <Image
+                  src={Flight_5}
+                  alt="Logo"
+                  width={150}
+                  height={150}
+                  className="max-sm:text-xl"
+                />
               </div>
-              <div className="flex flex-col md:w-full gap-y-5 lg:gap-x-28">
+              {/* 2 */}
+              <div className="flex flex-col md:w-full md:gap-x-10 gap-y-5 ">
                 <p className="text-3xl">7:30 AM - 9:12 AM</p>
-                <div className="flex items-center gap-x-10 lg:gap-x-28">
+                <div className="flex items-center gap-x-10 lg:gap-x-28 max-sm:flex-col max-sm:w-full max-sm:gap-y-2">
                   <div className="flex flex-col gap-y-2">
-                    <p className="font-bold"> Delta Air Lines</p>
+                    <p className="font-bold">Delta Air Lines</p>
                     <select className="w-full max-w-xs text-blue-500 select select-bordered select-sm">
                       <option defaultChecked>Small</option>
                       <option>Deneme 1</option>
@@ -478,11 +523,11 @@ export default function page() {
                       <option>Deneme 3</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 ">
                     <p className="font-bold">Nonstap</p>
                     <p>1h 15 min</p>
                   </div>
-                  <div className="flex flex-col gap-y-3">
+                  <div className="flex flex-col gap-y-3 max-sm:flex max-sm:flex-col max-sm:gap-y-2 max-sm:items-center">
                     <p className="font-bold">SFO to LAX</p>
                     <p>DL 1443</p>
                   </div>
@@ -490,8 +535,8 @@ export default function page() {
               </div>
             </div>
             {/* content table 2 */}
-            <div className="flex gap-40">
-              <div className="flex gap-20">
+            <div className="flex gap-40 max-sm:flex max-sm:justify-start max-sm:w-full max-sm:gap-16">
+              <div className="flex gap-20 max-sm:gap-6">
                 <div className="flex flex-col gap-2">
                   <span className="text-xl font-bold">$156</span>
                   <span>Main </span>

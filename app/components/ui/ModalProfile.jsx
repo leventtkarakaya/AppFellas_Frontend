@@ -3,6 +3,8 @@ import axios from "axios";
 import { X } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Swal from "sweetalert2";
+
 export default function Modal() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isloading, setIsloading] = useState(false);
@@ -70,7 +72,13 @@ export default function Modal() {
         window.location.reload();
       }
     } catch (error) {
-      console.log("🚀 ~ handleOnSubmitUserUpdated ~ error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Hata oluştu,sonra tekrar deneyin.",
+        text: error.response.data.message,
+        showConfirmButton: false,
+        timer: 3000,
+      });
     }
   };
   return (

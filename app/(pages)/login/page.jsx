@@ -11,18 +11,22 @@ import { useRouter } from "next/navigation";
 import { setUser } from "@/app/redux/slice/userSlice";
 import { useDispatch } from "react-redux";
 export default function page() {
+  /* Istek durumunu tutan state */
   const [isloading, setIsloading] = useState(false);
+  /* Redux dispatc erişim */
   const dispatch = useDispatch();
+  /* Routelere erişim */
   const router = useRouter();
+  /* İnput alanların value ile degerlerini tutan state */
   const [value, setValue] = useState({
     email: "",
     password: "",
   });
-
+  /* İnput alanların value ile degerlerini alan fonksiyon */
   const handleValueChange = (e) => {
     setValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-
+  /*  Giriş yap butonuna tıklandıgında tetiklenen istek fonksiyonu */
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -41,6 +45,7 @@ export default function page() {
         router.push("/");
       }
     } catch (error) {
+      /* Hata mesajıyı ekrana basan fonksiyon */
       Swal.fire({
         icon: "error",
         title: "Oops...",
