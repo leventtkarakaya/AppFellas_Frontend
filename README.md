@@ -1,6 +1,6 @@
 # Proje Yapısı ve Çalışma Süreci Üzerine Kısa Bir Değerlendirme
 
-Bu proje, iki ana bileşen olan backend ve frontend'den oluşmaktadır. Projenin başarılı bir şekilde çalışabilmesi için öncelikle backend kısmının başlatılması gerekmektedir. Bunun için terminalde ilk `npm install` sonra `npm start` komutu kullanılarak backend projesi aktive edilir. Ardından, frontend'in çalışabilmesi için yine terminalde `npm run dev` komutu ile frontend bileşeni devreye alınacaktır.
+Bu proje, iki ana bileşen olan backend ve frontend'den oluşmaktadır. Projenin başarılı bir şekilde çalışabilmesi için öncelikle backend kısmının başlatılması gerekmektedir. Bunun için terminalde ilk `npm install` sonra `npm start` komutu kullanılarak backend projesi aktive edilir. Ardından, frontend'in çalışabilmesi için yine terminalde `npm install` ve sonra `npm run dev` komutu ile frontend bileşeni devreye alınacaktır.
 
 ![image](Anasayfa.png) <!--  Frontend Bileşenleri -->
 
