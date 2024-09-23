@@ -94,7 +94,7 @@ export default function Navbar() {
                     href="/login"
                     className="px-6 btn bg-[#4a03a0] text-white hover:bg-[#4a03a0] hover:text-white"
                   >
-                    Üye Ol
+                    Giriş Yap
                   </a>
                 </li>
               ) : null}
